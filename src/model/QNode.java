@@ -1,6 +1,7 @@
 package model;
 
-public class QNode<T> {
+
+public class QNode<T> implements Comparable<QNode<T>> {
 	
 	private T data;
 	private QNode<T> next;
@@ -28,4 +29,21 @@ public class QNode<T> {
 	public QNode<T> getNext(){
 		return next;
 	}
+
+	@Override
+	public int compareTo(QNode<T> o) {
+		int result = 0;
+		
+//		if (o.getData() > getData()) {
+//			result = -1;
+//		}
+//		else if (this.empNo > o.getEmpNo()) {
+//			result = 1;
+//		}
+//		else {
+//			return 0;
+//		}
+		return result;
+	}
+
 }
