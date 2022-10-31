@@ -20,16 +20,16 @@ public class PriorityQueue<T> implements QueueInterface<T>{
 			
 			front.setNext(null);
 		}
-//		if ((int) t < (int)front.getData() || isEmpty()) {
-//			front = new QNode<T>(t); 
-//			front = front.getNext();
-//		}
-//		else if ((int) t > (int)front.getNext().getData()) {
-//			
-//		}
-//		if ((int) t > (int)rear.getData()) {
-//			
-//		}
+		if (front.compareTo(newNode) > 0) {
+			front = new QNode<T>(t); 
+			front = front.getNext();
+		}
+		else if ((int) t > (int)front.getNext().getData()) {
+			
+		}
+		if ((int) t > (int)rear.getData()) {
+			
+		}
 	}
 	
 	@Override
