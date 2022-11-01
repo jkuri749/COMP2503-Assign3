@@ -5,6 +5,7 @@ public class QNode<T> implements Comparable<QNode<T>> {
 	
 	private T data;
 	private QNode<T> next;
+	private QNode<T> prev;
 	
 	public QNode() {
 		data=null;
@@ -30,6 +31,20 @@ public class QNode<T> implements Comparable<QNode<T>> {
 		return next;
 	}
 
+	/**
+	 * @return the prev
+	 */
+	public QNode<T> getPrev() {
+		return prev;
+	}
+
+	/**
+	 * @param prev the prev to set
+	 */
+	public void setPrev(QNode<T> prev) {
+		this.prev = prev;
+	}
+	
 	@Override
 	public int compareTo(QNode<T> o) {
 		int result = 0;
