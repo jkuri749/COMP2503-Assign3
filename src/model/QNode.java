@@ -49,7 +49,7 @@ public class QNode<T> implements Comparable<QNode<T>> {
 	public int compareTo(QNode<T> o) {
 		int result = 0;
 		
-		result = this.data.toString().compareTo(o.getData().toString());
+		result = o.getData().toString().compareTo(this.data.toString());
 		
 		return result;
 	}
