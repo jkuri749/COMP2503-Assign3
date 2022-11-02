@@ -4,7 +4,6 @@ public class PriorityQueue<T> implements QueueInterface<T>{
 	private int size;
 	private QNode<T> front;
 	private QNode<T> rear;
-//	private QNode<T> curr;
 	
 	public PriorityQueue() {
 		size = 0;
@@ -21,7 +20,7 @@ public class PriorityQueue<T> implements QueueInterface<T>{
 		if (isEmpty()) {
 			curr = newNode; 
 			rear = curr;
-			front.setNext(null);
+//			front.setNext(null);
 		}
 		while (curr != null) {
 			if (newNode.compareTo(curr) < 0) {

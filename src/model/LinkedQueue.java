@@ -8,7 +8,7 @@ public class LinkedQueue<T> implements QueueInterface<T> {
 	private QNode<T> front;
 	private QNode<T> rear;
 	
-	private LinkedQueue() {
+	public LinkedQueue() {
 		size = 0;
 		front = null;
 		rear = null;
