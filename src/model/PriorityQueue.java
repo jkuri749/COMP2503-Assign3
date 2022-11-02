@@ -6,7 +6,7 @@ public class PriorityQueue<T> implements QueueInterface<T>{
 	private QNode<T> rear;
 //	private QNode<T> curr;
 	
-	private PriorityQueue() {
+	public PriorityQueue() {
 		size = 0;
 		front = null;
 		rear = null;
@@ -29,8 +29,8 @@ public class PriorityQueue<T> implements QueueInterface<T>{
 				curr.getPrev().setNext(newNode);
 			}
 			if (newNode.compareTo(curr) > 0) {
-				rear = newNode;
-				
+				newNode.setPrev(curr);
+				curr.getNext().setPrev(newNode);
 			}
 		}
 		++size; 
@@ -64,7 +64,7 @@ public class PriorityQueue<T> implements QueueInterface<T>{
 	
 	@Override
 	public void printQueue() {
-		//Node current will point to head  
+		//Node current will point to start  
         QNode<T> last = null; 
         if(front == null) {  
             System.out.println("queue is empty");  
