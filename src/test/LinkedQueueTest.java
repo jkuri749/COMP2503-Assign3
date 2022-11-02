@@ -44,12 +44,4 @@ public class LinkedQueueTest<T> {
 	void throwsExceptionWhenPeeked() {
 		assertThrows(NoSuchElementException.class, queue::peek);
 	}
-	
-	@Nested
-	@DisplayName("after enqueueing an object")
-	class AfterEnqueue{
-		
-		Queue aQueue = new 
-	}
-
 }
